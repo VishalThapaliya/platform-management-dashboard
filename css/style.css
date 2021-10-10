@@ -142,6 +142,7 @@ body {
 }
 
 /* ############## Main section ############ */
+/* ##### Topbar ##### */
 .main {
   position: absolute;
   width: calc(100% - 300px);
@@ -221,4 +222,61 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+/* ##### Cards ##### */
+.card-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.card-container .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.card-container .card.active,
+.card-container .card.active .numbers,
+.card-container .card.active .card-name,
+.card-container .card.active .icon-container {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.card-container .card:hover {
+  background: var(--blue);
+}
+
+.card-container .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2em;
+  color: var(--blue);
+}
+
+.card-container .card .card-name {
+  margin-top: 5px;
+  font-size: 1.1em;
+  color: var(--black2);
+}
+
+.card-container .card .icon-container {
+  font-size: 3em;
+  color: var(--black2);
+}
+
+.card-container .card:hover .numbers,
+.card-container .card:hover .card-name,
+.card-container .card:hover .icon-container {
+  color: var(--white);
 }
