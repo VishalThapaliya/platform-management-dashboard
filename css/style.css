@@ -212,20 +212,40 @@ body {
 
 .user {
   position: relative;
-  width: 40px;
+  width: 150px;
   height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.user img {
+.user .user-image-container {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+
+.user .user-image-container img {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 50%;
+}
+
+.user .user-info {
+  padding: 0 10px;
+}
+
+.user .user-info h4 {
+  color: var(--blue);
+  font-size: 14px;
+}
+
+.user .user-info small {
+  color: var(--black2);
 }
 
 /* ##### Cards ##### */
@@ -467,6 +487,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .user {
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+
+  .user .user-info {
+    display: none;
+  }
+
   .details {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -508,6 +537,7 @@ body {
   }
 
   .user {
+    justify-content: flex-end;
     min-width: 40px;
   }
 
