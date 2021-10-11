@@ -275,7 +275,7 @@ body {
 }
 
 .card-container .card .icon-container {
-  font-size: 3em;
+  font-size: 2.5em;
   color: var(--black2);
 }
 
@@ -388,4 +388,134 @@ body {
 
 .status.returned {
   background: var(--orange);
+}
+
+/* ##### Recent ##### */
+.recent-customers {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08));
+}
+
+.recent-customers .image-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.recent-customers .image-container img { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.recent-customers table tr td {
+  padding: 12px 10px;
+}
+
+.recent-customers table tr td h4 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+.recent-customers table tr td h4 span {
+  font-size: 14px;
+  color: var(--black2);
+}
+
+.recent-customers table tr:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.recent-customers table tr:hover td h4 span {
+  color: var(--white);
+}
+
+/* ############## Media queries ############ */
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main.active {
+    left: 300px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .recent-orders {
+    overflow-x: auto;
+  }
+
+  .status.in-progress {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+
+  .toggle {
+    z-index: 1001;
+  }
+
+  .main.active {
+    left: 0;
+  }
+
+  .main.active .toggle {
+    position: fixed;
+    right: 0;
+    left: initial;
+    color: var(--white);
+  }
+
+  .user {
+    min-width: 40px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-header h2 {
+    font-size: 20px;
+  }
 }
