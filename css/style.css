@@ -284,7 +284,7 @@ body {
 .card-container .card .numbers {
   position: relative;
   font-weight: 500;
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--blue);
 }
 
@@ -295,7 +295,7 @@ body {
 }
 
 .card-container .card .icon-container {
-  font-size: 2.5em;
+  font-size: 2em;
   color: var(--black2);
 }
 
@@ -326,7 +326,7 @@ body {
   border-radius: 20px;
 }
 
-.details .recent-orders .card-header {
+.card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -439,6 +439,19 @@ body {
 
 .recent-customers table tr td {
   padding: 12px 10px;
+}
+
+.recent-customers table tr td.contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.recent-customers table tr td.contact a {
+  padding: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black2);
 }
 
 .recent-customers table tr td h4 {
