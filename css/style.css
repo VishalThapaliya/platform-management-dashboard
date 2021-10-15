@@ -384,7 +384,7 @@ body {
   text-align: center;
 }
 
-.status.delivered,
+.status.done,
 .status.pending,
 .status.in-progress,
 .status.returned {
@@ -395,7 +395,7 @@ body {
   font-weight: 500;
 }
 
-.status.delivered {
+.status.done {
   background: var(--light-green);
 }
 
