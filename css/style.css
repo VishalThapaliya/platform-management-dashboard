@@ -9,15 +9,16 @@
 }
 
 :root {
-  --blue: #287bff;
-  --light-blue: #1795ce;
+  --color-bonita-blue: #19465f;
+  --color-bonita-red: ##dd042b;
+  --light-blue: #a0439c;
   --white: #fff;
   --gray: #f5f5f5;
   --black1: #222;
-  --black2: #999;
-  --light-green: #8de02c;
-  --orange: #f00;
-  --yellow: #f9ca3f;
+  --black2: #191919;
+  --light-green: #9dac8c;
+  --orange: #e7ba07;
+  --smoke-light: #876c6c;
 }
 
 body {
@@ -35,8 +36,8 @@ body {
   position: fixed;
   width: 300px;
   height: 100%;
-  background: var(--blue);
-  border-left: 10px solid var(--blue);
+  background: var(--color-bonita-blue);
+  border-left: 10px solid var(--color-bonita-blue);
   transition: 0.5s;
   overflow: hidden;
 }
@@ -80,7 +81,7 @@ body {
 
 .navigation ul li:hover a,
 .navigation ul li.hovered a {
-  color: var(--blue);
+  color: var(--color-bonita-blue);
 }
 
 .navigation ul li a .icon {
@@ -240,7 +241,7 @@ body {
 }
 
 .user .user-info h4 {
-  color: var(--blue);
+  color: var(--color-bonita-blue);
   font-size: 14px;
 }
 
@@ -273,19 +274,19 @@ body {
 .card-container .card.active .numbers,
 .card-container .card.active .card-name,
 .card-container .card.active .icon-container {
-  background: var(--blue);
+  background: var(--color-bonita-blue);
   color: var(--white);
 }
 
 .card-container .card:hover {
-  background: var(--blue);
+  background: var(--color-bonita-blue);
 }
 
 .card-container .card .numbers {
   position: relative;
   font-weight: 500;
   font-size: 1.5em;
-  color: var(--blue);
+  color: var(--color-bonita-blue);
 }
 
 .card-container .card .card-name {
@@ -334,13 +335,13 @@ body {
 
 .card-header h2 {
   font-weight: 600;
-  color: var(--blue);
+  color: var(--color-bonita-blue);
 }
 
 .card-header .button {
   position: relative;
   padding: 5px 10px;
-  background: var(--blue);
+  background: var(--color-bonita-blue);
   text-decoration: none;
   color: var(--white);
   border-radius: 6px;
@@ -366,7 +367,7 @@ body {
 }
 
 .details .recent-orders table tr:hover {
-  background: var(--blue);
+  background: var(--color-bonita-blue);
   color: var(--white);
 }
 
@@ -399,7 +400,7 @@ body {
 }
 
 .status.pending {
-  background: var(--yellow);
+  background: var(--smoke-light);
 }
 
 .status.in-progress {
@@ -445,13 +446,14 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-size: 20px;
 }
 
 .recent-customers table tr td.contact a {
   padding: 5px;
   text-decoration: none;
   cursor: pointer;
-  color: var(--black2);
+  color: var(--color-bonita-blue);
 }
 
 .recent-customers table tr td h4 {
@@ -466,11 +468,12 @@ body {
 }
 
 .recent-customers table tr:hover {
-  background: var(--blue);
+  background: var(--color-bonita-blue);
   color: var(--white);
 }
 
-.recent-customers table tr:hover td h4 span {
+.recent-customers table tr:hover td h4 span,
+.recent-customers table tr:hover .contact a {
   color: var(--white);
 }
 
