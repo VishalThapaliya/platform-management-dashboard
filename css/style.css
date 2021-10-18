@@ -10,7 +10,7 @@
 
 :root {
   --color-bonita-blue: #19465f;
-  --color-bonita-red: ##dd042b;
+  --color-bonita-red: #dd042b;
   --light-blue: #a0439c;
   --white: #fff;
   --gray: #f5f5f5;
@@ -306,6 +306,26 @@ body {
   color: var(--white);
 }
 
+/* ##### Charts ##### */
+.chart-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 30px;
+  min-height: 250px;
+}
+
+.chart-container .box {
+  position: relative;
+  background: var(--white);
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  border-radius: 20px;
+}
+
 /* ##### Details ##### */
 .details {
   position: relative;
@@ -418,7 +438,7 @@ body {
   min-height: 500px;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 7px 25px rgba(0,0,0,0.08));
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
 }
 
 .recent-customers .image-container {
@@ -499,6 +519,10 @@ body {
 
   .card-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart-container {
+    grid-template-columns: 1fr;
   }
 }
 
