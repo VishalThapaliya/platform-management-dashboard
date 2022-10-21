@@ -72,7 +72,6 @@ body {
 
 .navigation ul li a {
   position: relative;
-  display: block;
   width: 100%;
   display: flex;
   text-decoration: none;
